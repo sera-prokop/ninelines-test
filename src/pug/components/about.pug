@@ -3,7 +3,14 @@ section.about
 		| Описание
 
 	.about__img
-		img(src=`${baseDir}images/recourses/photo.jpg` alt="Фото")
+		img(src=`${baseDir}images/resources/photo.jpg` alt="Фото")
+
+		// При использовании ругается валидатор https://take.ms/Y7PLq
+		//
+			+lazyPicture({
+				src: `${baseDir}images/resources/photo.jpg`,
+				alt: 'Фото',
+			}).about__pic
 
 	.about__form
 		each field in data.aboutFields

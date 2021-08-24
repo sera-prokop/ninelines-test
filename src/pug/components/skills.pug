@@ -6,16 +6,20 @@ section.skills
 
 		+field-checkbox(data.skills, '')
 
-	.skills__meter
 
-		img(src=`${baseDir}images/recourses/meter.svg` alt="Meter")
 
-		img(src=`${baseDir}images/recourses/arrow-meter.svg` alt="Arrow meter")
+	.skills__speedometer
 
-	.skills__proficiency
+		.skills__images
 
-		p.skills__text
-			| Мой уровень владения #[br]
-			| JavaScript
+			img(src=`${baseDir}images/resources/speedometer.svg` alt="Speedometer")
 
-		span.skills__num 0
+			img(src=`${baseDir}images/resources/arrow-speedometer.svg` alt="Arrow speedometer").skills__arrow.js-arrow
+
+		.skills__proficiency
+
+			p.skills__text
+				| Мой уровень владения #[br]
+				| JavaScript
+
+			span.skills__num.js-num 0

@@ -1,5 +1,7 @@
 .skills{
+
 	margin-top: 35px;
+	margin-bottom: 65px;
 
 	&__title{
 		font-size: 18px;
@@ -8,10 +10,69 @@
 	}
 
 	&__form{
+		position: relative;
 
+		&:after{
+			content: '';
+			position: absolute;
+			height: 2px;
+			width: calc(100% + 30px);
+			background-color: $border-color2;
+			left: -15px;
+			bottom: 0;
+		}
 	}
 
-	&__item{
+	&__speedometer{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 55px;
 
+		@include tablet-s {
+			flex-direction: row;
+			align-items: flex-start;
+		}
+	}
+
+	&__images{
+		position: relative;
+	}
+
+	&__arrow{
+		position: absolute;
+		bottom: 0px;
+		left: 50%;
+		transform: translateX(-50%) rotate(-90deg);
+		transform-origin: 50% calc(100% - 5px);
+		transition: transform 0.25s ease-in-out;
+		will-change: transform;
+	}
+
+	&__proficiency{
+		margin-top: 40px;
+		text-align: center;
+
+		@include tablet-s{
+			margin-top: 10px;
+			margin-left: 65px;
+			text-align: left;
+		}
+	}
+
+	&__text{
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 1.33;
+		color: $black-color;
+		margin-bottom: 20px;
+	}
+
+	&__num{
+		font-size: 50px;
+		font-weight: 900;
+		letter-spacing: 2.5px;
+		color: $blue;
+		transition: 0.25s;
 	}
 }

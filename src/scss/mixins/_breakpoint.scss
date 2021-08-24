@@ -42,6 +42,12 @@
 	}
 }
 
+@mixin tablet-s {
+	@media (min-width: ($tablet * 1px)) {
+		@content;
+	}
+}
+
 @mixin devices {
 	@media (max-width: (($desktop - 1) * 1px)) {
 		@content;
