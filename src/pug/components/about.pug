@@ -1,0 +1,11 @@
+section.about
+	h2.about__title.visually-hidden
+		| Описание
+
+	.about__img
+		img(src=`${baseDir}images/recourses/photo.jpg` alt="Фото")
+
+	.about__form
+		each field in data.aboutFields
+			+form-field(field)
+

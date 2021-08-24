@@ -1,0 +1,4 @@
+mixin form-field(data)
+	.form-field
+		label.visually-hidden(for= data.forId)= data.label
+		input.form-field__input(type="text" id= data.forId value= data.value placeholder= data.placeholder)

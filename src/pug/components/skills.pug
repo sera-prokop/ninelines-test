@@ -1,0 +1,21 @@
+section.skills
+	h2.skills__title
+		| Навыки
+
+	.skills__form
+
+		+field-checkbox(data.skills, '')
+
+	.skills__meter
+
+		img(src=`${baseDir}images/recourses/meter.svg` alt="Meter")
+
+		img(src=`${baseDir}images/recourses/arrow-meter.svg` alt="Arrow meter")
+
+	.skills__proficiency
+
+		p.skills__text
+			| Мой уровень владения #[br]
+			| JavaScript
+
+		span.skills__num 0

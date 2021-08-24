@@ -1,0 +1,13 @@
+.home {
+	max-width: 690px;
+	width: 100%;
+	margin: 30px auto 50px;
+	padding: 0 15px;
+	background-color: $color-white;
+
+	@include desktop {
+		padding: 0 15px;
+		margin-top: 60px;
+		margin-bottom: 100px;
+	}
+}
