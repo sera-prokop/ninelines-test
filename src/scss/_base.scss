@@ -25,20 +25,20 @@ html {
 }
 
 body {
-	background-color: $bg-color;
+	font-family: $font-family-roboto;
+	font-weight: 500;
 	-webkit-font-smoothing: antialiased;
 	text-decoration-skip: objects;
 	text-rendering: optimizeLegibility;
 	text-size-adjust: 100%;
-	-webkit-tap-highlight-color: transparent;
-	font-family: $font-family-roboto;
-	font-weight: 500;
 	color: $text-color;
+	-webkit-tap-highlight-color: transparent;
+	background-color: $bg-color;
 }
 
 main {
-	flex: 1;
 	display: flex;
+	flex: 1;
 	align-items: center;
 }
 

@@ -1,10 +1,13 @@
 .home {
 	max-width: 660px;
 	width: 100%;
-	margin: 30px auto 50px;
 	padding: 0 20px;
 	background-color: $color-white;
 	background-image: url('../images/resources/bg.jpg');
+
+	@include mobile-s{
+		margin: 30px auto 50px;
+	}
 
 	@include desktop {
 		padding: 0 20px;

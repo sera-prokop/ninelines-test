@@ -18,7 +18,7 @@
 		padding-left: 10px;
 		padding-right: 10px;
 		width: 50%;
-		margin-bottom: 40px;
+		margin-bottom: 35px;
 
 		@include mobile-s {
 			width: 33.333%;
@@ -116,7 +116,6 @@
 			border-bottom: 2px solid $color-white;
 			transform: rotate(-45deg);
 			transition: opacity 0.25s;
-			//box-shadow: 1px 2px 0 #fff, inset 0 -2px 0 #fff;
 
 			@at-root input:checked ~ & {
 				opacity: 1;
