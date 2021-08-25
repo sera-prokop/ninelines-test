@@ -3,17 +3,17 @@ function percentCalculate() {
 	let checked = 0;
 	let checkboxesLength = checkboxes.length;
 
-	checkboxes.forEach(checkbox => {
-		if(checkbox.checked){
-			checked++
+	checkboxes.forEach((checkbox) => {
+		if (checkbox.checked) {
+			checked++;
 		}
-	})
+	});
 
 	return 100 / (checkboxesLength / checked);
 }
 
 function angleCalculation() {
-	let percent = percentCalculate()
+	let percent = percentCalculate();
 
 	return percent / 100 * 180 - 90;
 }
@@ -26,43 +26,32 @@ function numberChange() {
 	numElement.innerHTML = Math.round(num);
 }
 
-numberChange()
-
-
-
-function percentInit(){
-
-	let angle = angleCalculation()
+function percentInit() {
+	let angle = angleCalculation();
 
 	document.querySelector('.skills__arrow').style.transform = `translateX(-50%) rotate(${angle}deg)`;
-
 }
 
-percentInit()
-
-
-
-
-
+percentInit();
+numberChange();
 
 function init() {
 	let checkboxContainer = document.querySelector('.field-checkbox');
-	checkboxContainer.addEventListener('change', function(event){
-
+	checkboxContainer.addEventListener('change', (event) => {
 		let checkbox = event.target.closest('.field-checkbox__name');
 
-		if (!checkbox) return;
+		if (!checkbox) {
+			return;
+		}
+		event.preventDefault();
 
-		event.preventDefault()
-
-		let angle = angleCalculation()
+		let angle = angleCalculation();
 
 		document.querySelector('.js-arrow').style.transform = `translateX(-50%) rotate(${angle}deg)`;
-
-		numberChange()
-	})
+		numberChange();
+	});
 }
 
 export default {
-	init
+	init,
 };

@@ -1,29 +1,28 @@
-.skills{
-
+.skills {
 	margin-top: 35px;
 	margin-bottom: 65px;
 
-	&__title{
+	&__title {
+		margin: 0 0 25px;
 		font-size: 18px;
 		color: $black-color;
-		margin: 0 0 25px;
 	}
 
-	&__form{
+	&__form {
 		position: relative;
 
-		&:after{
-			content: '';
+		&::after {
+			content: "";
 			position: absolute;
-			height: 2px;
-			width: calc(100% + 30px);
-			background-color: $border-color2;
 			left: -15px;
 			bottom: -5px;
+			width: calc(100% + 30px);
+			height: 2px;
+			background-color: $border-color2;
 		}
 	}
 
-	&__speedometer{
+	&__speedometer {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -35,42 +34,42 @@
 		}
 	}
 
-	&__images{
+	&__images {
 		position: relative;
 	}
 
-	&__arrow{
+	&__arrow {
 		position: absolute;
-		bottom: 0px;
 		left: 50%;
+		bottom: 0;
 		transform: translateX(-50%) rotate(-90deg);
 		transform-origin: 50% calc(100% - 5px);
 		transition: transform 0.25s ease-in-out;
 		will-change: transform;
 	}
 
-	&__proficiency{
+	&__proficiency {
 		margin-top: 40px;
 		text-align: center;
 
-		@include tablet-s{
+		@include tablet-s {
 			margin-top: 10px;
 			margin-left: 65px;
 			text-align: left;
 		}
 	}
 
-	&__text{
-		font-size: 18px;
+	&__text {
+		margin-bottom: 15px;
 		font-weight: 500;
+		font-size: 18px;
 		line-height: 1.33;
 		color: $black-color;
-		margin-bottom: 15px;
 	}
 
-	&__num{
-		font-size: 50px;
+	&__num {
 		font-weight: 900;
+		font-size: 50px;
 		letter-spacing: 2.5px;
 		color: $blue;
 		transition: 0.25s;
